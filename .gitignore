@@ -8,3 +8,6 @@
 
 # dotenv environment variable files
 .env
+
+#docker
+/data
