@@ -5,6 +5,8 @@ import { AuthModule } from './auths/auth.module';
 import { PrismaService } from './services/prisma/prisma.service';
 import { RegisterUserController } from './controllers/user/register-user.controller';
 import { LoginUserController } from './controllers/user/login-user.controller';
+import { RegisterPokemonController } from './controllers/pokemon/register-pokemon.controller';
+import { AxiosService } from './services/axios/axios.service';
 
 @Module({
   imports: [
@@ -14,7 +16,7 @@ import { LoginUserController } from './controllers/user/login-user.controller';
     }),
     AuthModule,
 ],
-  controllers: [RegisterUserController, LoginUserController],
-  providers: [PrismaService],
+  controllers: [RegisterUserController, LoginUserController, RegisterPokemonController],
+  providers: [PrismaService, AxiosService],
 })
 export class AppModule {}
