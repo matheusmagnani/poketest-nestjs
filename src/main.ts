@@ -5,7 +5,7 @@ import { Env } from './env';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
-    // logger: false
+    logger: false
   });
   
   const configService: ConfigService<Env, true> = app.get(ConfigService)
